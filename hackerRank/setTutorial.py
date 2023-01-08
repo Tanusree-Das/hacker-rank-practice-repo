@@ -5,7 +5,8 @@ if __name__=="__main__":
     user_choice=int(input("press 1 to run basic set operation to find average of distinct values in a given array"
                           "\npress 2 to run add functionality of sets"
                           "\npress 3 to perform remove, pop and discard methods on a given set and print sum of"
-                          "the remaining elements, make sure the inputs should be >0 and <9\n"))
+                          "the remaining elements, make sure the inputs should be >0 and <9\n"
+                          "press 4 to perform intersection between to sets\n"))
     if (user_choice==1):
 
         size_of_array = int(input("size of array?")) #N, the size of arr
@@ -44,4 +45,14 @@ if __name__=="__main__":
             except Exception as e:
                 pass
         print("sum of remaining items are= ",sum(s))
+
+    elif(user_choice==4):
+        n=int(input("no of students who have subscribed to english newspaper? "))
+        english_subscribed_students_rollnos=set(map(int,input("space separated roll nos? ").split()))
+        b=int(input("no of students who have subscribed to french newspaper? "))
+        french_subscribed_students_rollnos=set(map(int,input("space separated roll nos? ").split()))
+        students_subscribed_both_classes=english_subscribed_students_rollnos.intersection(french_subscribed_students_rollnos)
+        print(students_subscribed_both_classes.__len__(),"students have enrolled in both the classes.")
+
+
 

@@ -12,7 +12,9 @@ Constraints:- 0<T<10"""
 if __name__=="__main__": #can be executed only as script
     what_to_execute=int(input("press 1 to execute number division Exception \n"
                               "press 2 to execute KeyBoard Exception \n"
-                              "press 3 class level exception:\n"))
+                              "press 3 class level exception:\n"
+                              "press 4 to assign args and str in a custom Exception\n"
+                              "press 5 for except,else and finally block check\n"))
     if what_to_execute==1:
         print("Code for Number division Exception Handling From HackerRank.")
         number_of_test_cases=int(input("number of test cases?"))
@@ -78,7 +80,29 @@ if __name__=="__main__": #can be executed only as script
 
         print("\n**That means except clause is compatible with an exception if it "
               "is the same class or a base class but not the other way around**")
-    elif what_to_execute==4:
+    elif what_to_execute == 4:
+        class LowAgeError(Exception):
+            def __init__(self,*args):
+                pass
+            def __str__(self):
+                return "You are too young to be an Employee"
+        class Employee:
+            def __init__(self,name,age):
+                self.name=name
+                if age>18:
+                    self.age=age
+                else:
+                    raise LowAgeError(age)
+            def display(self):
+                print("The name of the employee is ",self.name," and age is ",self.age)
+        try:
+            employee2 = Employee("Dipesh",50)
+            employee1 = Employee("Tanusree", 15)
+        except LowAgeError as e:
+            print("Error Code:",e.args)
+
+
+    elif what_to_execute==5:
         try:
             my_dividend=int(input("2/?"))
             my_result=2//my_dividend
