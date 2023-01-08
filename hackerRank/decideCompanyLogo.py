@@ -6,12 +6,6 @@ Print the three most common characters along with their occurrence count.
 Sort in descending order of occurrence count.
 If the occurrence count is the same, sort the characters in alphabetical order.'''
 
-''' first_item=x.most_common(1)
- second_item=  [a for a in x.most_common(2) if a not in first_item]
- top3=x.most_common(3)  #get top3
- #third_item=top3-top2
- print(first_item,second_item)'''
-
 import collections
 
 def get_key_from_value(d, val):
