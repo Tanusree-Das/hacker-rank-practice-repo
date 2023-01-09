@@ -35,8 +35,8 @@ def solution_by_tannu(s):
 def solution_by_chatgpt(s):
     char_count=Counter(s)
     sorted_char_count=sorted(char_count.items(), key=lambda x:(-x[1],x[0])) #need to read this part
-    for i,j in dict(sorted_char_count[:3]).items():
-        print(i,j)
+    for i in sorted_char_count[:3]:
+        print(*i)
 
 
 
