@@ -8,6 +8,7 @@ HackerRank Practice
 
 
 practing my python skill in hacker rank
+Random Hackerrank problem solution using python
 
 
 
